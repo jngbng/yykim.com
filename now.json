@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "public": false,
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/api/redirect.js"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "/api/redirect.js?path=$1"
+    }
+  ]
+}
