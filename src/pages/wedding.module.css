@@ -1,0 +1,418 @@
+/*
+For "n" images You must define:
+
+a = presentation time for one image
+b = duration for cross fading
+
+Total animation-duration is of course t = (a+b) * n
+
+animation-delay = t/n or = a+b
+
+Percentage for keyframes:
+
+1. 0%
+2. a/t * 100%
+3. (a+b)/t*100% = 1/n*100%
+4. 100%-(b/t*100%)
+5. 100%
+ */
+
+@keyframes imgFadeInOut4 {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes imgFadeInOut3 {
+  0% {
+    opacity:1;
+  }
+  23% {
+    opacity:1;
+  }
+  33% {
+    opacity:0;
+  }
+  90% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+section {
+    padding: 100px 0px;
+}
+
+.container {
+}
+
+.container h1 {
+    padding: 0px 0px 50px;
+    margin: 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.container a:hover {
+    color: red;
+}
+
+.container p {
+    line-height: 1.6em;
+}
+
+
+.main {
+}
+
+.footer {
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer::before,
+.footer::after {
+    background-position: 0% 30% !important;
+    filter: contrast(40%);
+}
+
+.footerThanks {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.footerSig {
+}
+
+
+/*************************/
+
+.intro {
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* https://css-tricks.com/almanac/properties/f/filter/ */
+/* .intro::before, */
+/* .intro::after { */
+/*     filter: opacity(.7); */
+/* } */
+
+.introContent {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    padding: 40px 30px;
+    margin: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.introContent h1 {
+    margin-bottom: 60px;
+    padding: 0px;
+}
+
+.inroMessage {
+}
+
+.introWhenWhere {
+    margin-top: 30px;
+}
+
+/* menus ************************/
+
+.menus {
+    padding: 60px 0px;
+}
+
+.menus ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menus ul li {
+    padding: 0px 10px;
+    list-style: none;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menus a {
+    color: #666;
+}
+
+.menus a:visited {
+    color: #666;
+}
+
+/* bloomAndBride ************************/
+
+.bloomAndBride {
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+}
+
+.whoAreUs {
+    width: 50%;
+    max-width: 512px;
+    padding: 0px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .bloomAndBride {
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    .whoAreUs {
+        width: 100%;
+    }
+
+    .whoAreUs:nth-child(1) {
+        margin-bottom: 50px;
+    }
+}
+
+.whoAreUs .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.whoAreUs .profileImg {
+    width: 100% !important;
+    height: 450px;
+}
+
+.whoAreUs .introduction {
+    margin: 0px;
+}
+
+/* spliter1 ***********************/
+
+.spliter1 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* stories ************************/
+
+.stories {
+    background: #f8f8f8;
+}
+
+.story {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+    margin: 0px 50px;
+}
+
+.story:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.storyImg {
+    width: 40%;
+    max-width: 410px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.storyImgHolder {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+}
+
+.storyMultiImgWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.storyWhen {
+    width: 20%;
+    max-width: 204px;
+    text-align: center;
+}
+
+.storyWhenYear {
+    font-size: 1.2em;
+}
+
+.storyWhenMonth {
+    font-size: 1.8em;
+    margin-top: 5px;
+}
+
+.storyDetail {
+    width: 40%;
+    max-width: 410px;
+}
+
+.storyTitle {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.storyComment {
+    padding: 5px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .story, .story:nth-child(even) {
+        flex-direction: column;
+        justify-content: stretch;
+        margin: 50px 0px;
+    }
+
+    .storyImg,
+    .storyWhen,
+    .storyDetail {
+        width: 100%;
+        padding: 0px 30px;
+    }
+
+    .storyWhen {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+
+    .storyWhenMonth {
+        font-size: 1.2em;
+        margin: 0 0 0 10px;
+    }
+}
+
+.storiesFinal {
+    text-align: center;
+    color: black;
+    margin-top: 100px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.storiesConclusion {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    height: 400px;
+}
+
+.storiesConclusion,
+.storiesConclusion::before,
+.storiesConclusion::after {
+    background-position: 0% 20% !important;
+    filter: contrast(75%) brightness(110%);
+}
+
+.commentBy {
+    margin-right: 10px;
+}
+
+/* where & when */
+
+.whereWhen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whereWhenWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.whenOfWhereWhen {
+    margin-right: 30px;
+}
+
+.whereOfWhereWhen {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.whereOfWhereWhen li {
+    margin: 0px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .whereWhenWrapper {
+        flex-direction: column;
+    }
+
+    .whenOfWhereWhen {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+
+
+/* gallery ************************/
+
+.gallery {
+    text-align: center;
+    padding-bottom: 0px;
+    background: #f8f8f8;
+    background: linear-gradient(0deg, #666 0%, #f8f8f8 100%);
+}
+
+.galleryWrapper {
+    padding: 0px 10px;
+}
+
+/* .gallery img { */
+/*     width: 200px; */
+/*     height: 200px; */
+/*     background-size: cover; */
+/*     background-repeat: no-repeat; */
+/*     background-position: center; */
+/* } */
