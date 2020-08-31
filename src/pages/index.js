@@ -319,6 +319,7 @@ export default function WeddingPage({data}) {
       <SEO
         title="유영&#128150;정봉"
         lang="ko"
+        description="유영과 정봉이 결혼합니다."
         meta={[{
           name: "og:image",
           content: `https://yykim.com${data.ogImg.publicURL}`,
