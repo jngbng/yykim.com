@@ -7,16 +7,6 @@
   --height-top-menu: 79px;
 }
 
-/* https://noonnu.cc/ */
-@font-face {
-    font-family: 'Bazzi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-}
-
-
 html {
   font-family: "Spoqa Han Sans", sans-serif;
   -ms-text-size-adjust: 100%;

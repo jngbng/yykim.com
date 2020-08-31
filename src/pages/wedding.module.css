@@ -17,6 +17,24 @@ Percentage for keyframes:
 5. 100%
  */
 
+@keyframes imgFadeInOut5 {
+  0% {
+    opacity:1;
+  }
+  14% {
+    opacity:1;
+  }
+  20% {
+    opacity:0;
+  }
+  94% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 @keyframes imgFadeInOut4 {
   0% {
     opacity:1;
@@ -53,12 +71,31 @@ Percentage for keyframes:
   }
 }
 
+/* https://noonnu.cc/ */
 
-section {
-    padding: 100px 0px;
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'BodyFont';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
 }
 
 .container {
+    font-family: 'MapoFlowerIsland';
+}
+
+
+.container section {
+    padding: 100px 0px;
 }
 
 .container h1 {
@@ -68,14 +105,21 @@ section {
     text-align: center;
 }
 
-.container a:hover {
-    color: red;
-}
-
 .container p {
     line-height: 1.6em;
 }
 
+.container a {
+    color: inherit;
+}
+
+.container a:visited {
+    color: inherit;
+}
+
+.container a:hover {
+    color: red;
+}
 
 .main {
 }
@@ -103,6 +147,7 @@ section {
 }
 
 .footerSig {
+    font-weight: bold;
 }
 
 
@@ -118,6 +163,13 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+.intro,
+.intro::before,
+.intro::after {
+    background-position: 53% 50% !important;
+}
+
 
 /* https://css-tricks.com/almanac/properties/f/filter/ */
 /* .intro::before, */
@@ -168,14 +220,6 @@ section {
     margin: 0;
 }
 
-.menus a {
-    color: #666;
-}
-
-.menus a:visited {
-    color: #666;
-}
-
 /* bloomAndBride ************************/
 
 .bloomAndBride {
@@ -198,6 +242,7 @@ section {
 
     .whoAreUs {
         width: 100%;
+        max-width: none;
     }
 
     .whoAreUs:nth-child(1) {
@@ -219,6 +264,7 @@ section {
 
 .whoAreUs .introduction {
     margin: 0px;
+    font-family: 'BodyFont';
 }
 
 /* spliter1 ***********************/
@@ -226,8 +272,21 @@ section {
 .spliter1 {
     height: 400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.spliter1 p.poem {
+    margin: 30px 0px 0px;
+    text-align: center;
+    line-height: 2em;
+    font-family: 'MapoFlowerIsland';
+    font-weight: bold;
+}
+
+.poetry {
+    font-size: 0.9em;
 }
 
 
@@ -275,6 +334,7 @@ section {
     width: 20%;
     max-width: 204px;
     text-align: center;
+    font-weight: bold;
 }
 
 .storyWhenYear {
@@ -291,7 +351,12 @@ section {
     max-width: 410px;
 }
 
+.storyDetail p {
+    font-family: 'BodyFont';
+}
+
 .storyTitle {
+    font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -311,6 +376,7 @@ section {
     .storyWhen,
     .storyDetail {
         width: 100%;
+        max-width: none;
         padding: 0px 30px;
     }
 
@@ -345,7 +411,7 @@ section {
 .storiesConclusion,
 .storiesConclusion::before,
 .storiesConclusion::after {
-    background-position: 0% 20% !important;
+    background-position: 30% 20% !important;
     filter: contrast(75%) brightness(110%);
 }
 
@@ -365,6 +431,7 @@ section {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
+    font-weight: bold;
 }
 
 .whenOfWhereWhen {

@@ -25,11 +25,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `"유영&#128150;정봉"`,
+        short_name: `"유영&#128150;정봉"`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#f8f8f8`,
+        theme_color: `#f8f8f8`,
         display: `minimal-ui`,
         icon: `src/images/yykim.jpg`, // This path is relative to the root of the site.
       },

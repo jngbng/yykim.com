@@ -25,6 +25,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }, plugi
         __html: `window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\\x2fscript>');`,
       }}/>,
     <script
+      key="daumRoughmapLoaderScript"
       charSet="UTF-8"
       className="daum_roughmap_loader_script"
       src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
