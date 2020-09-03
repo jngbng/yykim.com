@@ -473,6 +473,21 @@ Percentage for keyframes:
     padding: 0px 10px;
 }
 
+section.letterForCovid19 {
+    text-align: left;
+    background: #666;
+    color: white;
+    padding-top: 0px;
+}
+
+.letterForCovid19 .letterForCovid19Container {
+    font-family: 'BodyFont';
+    max-width: 620px;
+    padding: 0px 10px;
+    margin: 0px auto;
+    line-height: 2em;
+}
+
 /* .gallery img { */
 /*     width: 200px; */
 /*     height: 200px; */

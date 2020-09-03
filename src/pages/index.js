@@ -313,6 +313,26 @@ function Gallery({data}) {
   );
 }
 
+function LetterForCOVID19() {
+  return (
+    <section
+      id={LetterForCOVID19.name}
+      className={styles.letterForCovid19}
+    >
+      <h1>코로나 안내</h1>
+      <p className={styles.letterForCovid19Container}>
+        최근 코로나19로 인해 어려운 시기를 보내고 있는 요즘, 걱정이 많으실거라 생각됩니다.
+        결혼식 참석에 대한 부담은 갖지 마시고 마음 가득 축복해주시길 바랍니다.
+        전해주시는 축하의 마음만으로도 저희는 큰 힘과 기쁨 됨을 말씀드리고 싶습니다.
+        새로운 출발을 축하해 주시는 모든 분들께 진심으로 감사드리며 건강하시기를 기원합니다.<br />
+        <br />
+        <strong>* 식사는 뷔페가 아닌 1인 코스로 개인별로 제공됩니다.<br />
+        * 예식장도 저희 손님들만 단독으로 사용합니다.</strong>
+      </p>
+    </section>
+  );
+}
+
 export default function WeddingPage({data}) {
   return (
     <div className={styles.container}>
@@ -356,6 +376,8 @@ export default function WeddingPage({data}) {
       <WhereWhen />
 
       <Gallery data={data} />
+
+      <LetterForCOVID19 />
 
       <BackgroundImage
         Tag="div"
