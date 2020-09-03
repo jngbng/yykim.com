@@ -325,38 +325,38 @@ export default function WeddingPage({data}) {
           content: `https://yykim.com${data.ogImg.publicURL}`,
         }]}
       />
-      <main className={styles.main}>
-        <Intro data={data} />
 
-        <Menus />
+      <Intro data={data} />
 
-        <BloomAndBride data={data} />
+      <Menus />
 
-        <div className={styles.spliter1}>
-          <Img
-            fixed={data.laurelTree.childImageSharp.fixed}/>
-          <p className={styles.poem}>
-            사랑은 소유가 아니라 동행임을 아는 두사람<br/>
-            잡은 손을 놓지 않되 함부로 잡아끌지 않을 것이며<br/>
-            서로의 두 눈을 고요히 바라보아<br/>
-            말하지 않아도 같은 쪽으로 걸어가리라<br/>
-            <span className={styles.poetry}>&lt;박미라, "아름다운 날에 부치다" 중&gt;</span>
-          </p>
-        </div>
+      <BloomAndBride data={data} />
 
-        <Stories data={data} />
+      <div className={styles.spliter1}>
+        <Img
+          fixed={data.laurelTree.childImageSharp.fixed}/>
+        <p className={styles.poem}>
+          사랑은 소유가 아니라 동행임을 아는 두사람<br/>
+          잡은 손을 놓지 않되 함부로 잡아끌지 않을 것이며<br/>
+          서로의 두 눈을 고요히 바라보아<br/>
+          말하지 않아도 같은 쪽으로 걸어가리라<br/>
+          <span className={styles.poetry}>&lt;박미라, "아름다운 날에 부치다" 중&gt;</span>
+        </p>
+      </div>
 
-        <BackgroundImage
-          Tag="div"
-          className={styles.storiesConclusion}
-          fluid={data.storyConclusion.childImageSharp.fluid}
-        >
-        </BackgroundImage>
+      <Stories data={data} />
 
+      <BackgroundImage
+        Tag="div"
+        className={styles.storiesConclusion}
+        fluid={data.storyConclusion.childImageSharp.fluid}
+      >
+      </BackgroundImage>
 
-        <WhereWhen />
-        <Gallery data={data} />
-      </main>
+      <WhereWhen />
+
+      <Gallery data={data} />
+
       <BackgroundImage
         Tag="div"
         className={styles.footer}
