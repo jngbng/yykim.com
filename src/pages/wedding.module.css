@@ -445,6 +445,13 @@ Percentage for keyframes:
     margin: 0px;
 }
 
+.whereWhenMapContainer {
+    margin-top: 30px;
+    max-width: 500px;
+    width: 100%;
+    padding: 0px 10px;
+    text-align: center;
+}
 
 @media only screen and (max-width: 600px) {
     .whereWhenWrapper {
@@ -458,6 +465,11 @@ Percentage for keyframes:
     }
 }
 
+.mapIcon {
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    margin: 0px 5px;
+}
 
 
 /* gallery ************************/
@@ -465,8 +477,6 @@ Percentage for keyframes:
 .gallery {
     text-align: center;
     padding-bottom: 0px;
-    background: #f8f8f8;
-    background: linear-gradient(0deg, #666 0%, #f8f8f8 100%);
 }
 
 .galleryWrapper {
@@ -475,9 +485,7 @@ Percentage for keyframes:
 
 section.letterForCovid19 {
     text-align: left;
-    background: #666;
-    color: white;
-    padding-top: 0px;
+    background: #f8f8f8;
 }
 
 .letterForCovid19 .letterForCovid19Container {

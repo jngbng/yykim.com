@@ -48,26 +48,26 @@ function Menus(props) {
     <section className={styles.menus}>
       <ul>
         <li>
-          <Link to={`#${Intro.name}`}>
-            맨위로
+          <Link to={`#${Stories.name}`}>
+            우리 이야기
           </Link>
         </li>
         <li>
-          <Link to={`#${Stories.name}`}>
-            우리 이야기
+          <Link to={`#${Gallery.name}`}>
+            갤러리
           </Link>
         </li>
         <li>
           <span role="img" aria-label="tada">&#127881;</span>
         </li>
         <li>
-          <Link to={`#${WhereWhen.name}`}>
-            시간과 장소
+          <Link to={`#${LetterForCOVID19.name}`}>
+            코로나 안내
           </Link>
         </li>
         <li>
-          <Link to={`#${Gallery.name}`}>
-            갤러리
+          <Link to={`#${WhereWhen.name}`}>
+            시간과 장소
           </Link>
         </li>
       </ul>
@@ -261,14 +261,7 @@ function Stories({data}) {
   );
 }
 
-function WhereWhen(props) {
-  const mapHeight= 360;
-  useEffect(() => {
-    if ("daum" in window) {
-      const mapWidth = Math.min(640, Math.max(300, window.document.body.clientWidth - 60));
-      new window.daum.roughmap.Lander({timestamp: "1598805339827", key : "2ztno", mapWidth: mapWidth, mapHeight: mapHeight}).render();
-    }
-  });
+function WhereWhen({data}) {
   return (
     <section
       id={WhereWhen.name}
@@ -286,14 +279,23 @@ function WhereWhen(props) {
           <li>승용차 주차 무료</li>
         </ul>
       </div>
-      <div>
-        <div>
-          <div
-            id="daumRoughmapContainer1598805339827"
-            className="root_daum_roughmap root_daum_roughmap_landing"
-            style={{height: mapHeight}}>
-          </div>
-        </div>
+      <div className={styles.whereWhenMapContainer}>
+        <Img
+          fluid={data.map.childImageSharp.fluid}
+          alt="약도" />
+        <br />
+        <a href="https://map.kakao.com/?urlX=511817&urlY=1112785&urlLevel=3&map_type=TYPE_MAP&map_hybrid=false">
+          <Img
+            fixed={data.kakaoMap.childImageSharp.fixed}
+            className={styles.mapIcon}
+            alt="카카오 지도" />
+        </a>
+        <a href="http://naver.me/FAjWyeif">
+          <Img
+            fixed={data.naverMap.childImageSharp.fixed}
+            className={styles.mapIcon}
+            alt="네이버 지도" />
+        </a>
       </div>
     </section>
   );
@@ -334,7 +336,7 @@ function LetterForCOVID19({data}) {
       </p>
       <figure className={styles.hallSettingContainer}>
         <Img
-        fluid={data.weddingHallSetting.childImageSharp.fluid}
+          fluid={data.weddingHallSetting.childImageSharp.fluid}
           alt="웨딩홀 자리 배치"
           imgStyle={{
             filter: "contrast(60%) brightness(120%)"
@@ -386,11 +388,11 @@ export default function WeddingPage({data}) {
       >
       </BackgroundImage>
 
-      <WhereWhen />
-
       <Gallery data={data} />
 
       <LetterForCOVID19 data={data} />
+
+      <WhereWhen data={data} />
 
       <BackgroundImage
         Tag="div"
@@ -518,6 +520,27 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    map: file(relativePath: { eq: "map.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    kakaoMap: file(relativePath: { eq: "kakaomap.png" }) {
+      childImageSharp {
+        fixed(width: 45, quality: 95) {
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        }
+      }
+    }
+    naverMap: file(relativePath: { eq: "navermap.png" }) {
+      childImageSharp {
+        fixed(width: 45, quality: 95) {
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
