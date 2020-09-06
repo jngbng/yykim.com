@@ -313,7 +313,7 @@ function Gallery({data}) {
   );
 }
 
-function LetterForCOVID19() {
+function LetterForCOVID19({data}) {
   return (
     <section
       id={LetterForCOVID19.name}
@@ -326,9 +326,22 @@ function LetterForCOVID19() {
         전해주시는 축하의 마음만으로도 저희는 큰 힘과 기쁨 됨을 말씀드리고 싶습니다.
         새로운 출발을 축하해 주시는 모든 분들께 진심으로 감사드리며 건강하시기를 기원합니다.<br />
         <br />
-        <strong>* 식사는 뷔페가 아닌 1인 코스로 개인별로 제공됩니다.<br />
-        * 예식장도 저희 손님들만 단독으로 사용합니다.</strong>
+        <strong>
+          * 로비에서 웰컴 드링크를 제공합니다.<br />
+          * 식사는 1인 코스로 개인별로 제공됩니다.<br />
+          * 예식장도 제한된 인원이 단독으로 사용합니다.
+        </strong>
       </p>
+      <figure className={styles.hallSettingContainer}>
+        <Img
+        fluid={data.weddingHallSetting.childImageSharp.fluid}
+          alt="웨딩홀 자리 배치"
+          imgStyle={{
+            filter: "contrast(60%) brightness(120%)"
+          }}
+        />
+        <figcaption>웨딩홀 자리 배치</figcaption>
+      </figure>
     </section>
   );
 }
@@ -377,7 +390,7 @@ export default function WeddingPage({data}) {
 
       <Gallery data={data} />
 
-      <LetterForCOVID19 />
+      <LetterForCOVID19 data={data} />
 
       <BackgroundImage
         Tag="div"
@@ -500,6 +513,13 @@ export const query = graphql`
     }
     ogImg: file(relativePath: { eq: "og_wedding.jpg" }) {
       publicURL
+    }
+    weddingHallSetting: file(relativePath: { eq: "wedding_hall_setting.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
     galleryFiles: allFile(
         filter: { sourceInstanceName: { eq: "content/gallery" } },

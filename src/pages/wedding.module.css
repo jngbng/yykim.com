@@ -487,3 +487,14 @@ section.letterForCovid19 {
     margin: 0px auto;
     line-height: 2em;
 }
+
+.hallSettingContainer {
+    max-width: 500px;
+    margin: 20px auto 0px;
+}
+
+.hallSettingContainer figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'BodyFont';
+}
