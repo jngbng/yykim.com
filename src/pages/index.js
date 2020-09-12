@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill";
 import BackgroundImage from "gatsby-background-image";

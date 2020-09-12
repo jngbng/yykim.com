@@ -1,0 +1,304 @@
+/* https://noonnu.cc/ */
+
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'BodyFont';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+.container {
+    font-family: 'MapoFlowerIsland';
+}
+
+.container section {
+    padding: 100px 0px;
+}
+
+.container h1 {
+    padding: 0px 0px 50px;
+    margin: 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.container p {
+    line-height: 1.6em;
+}
+
+.container a {
+    color: inherit;
+}
+
+.container a:visited {
+    color: inherit;
+}
+
+.container a:hover {
+    color: red;
+}
+
+.footer {
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.footer::before,
+.footer::after {
+    background-position: 0% 30% !important;
+    filter: contrast(40%);
+}
+
+.footerThanks {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.footerSig {
+    font-weight: bold;
+}
+
+
+/*************************/
+
+.intro {
+    padding-top: 100px;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro,
+.intro::before,
+.intro::after {
+    background-position: 53% 50% !important;
+}
+
+
+/* https://css-tricks.com/almanac/properties/f/filter/ */
+/* .intro::before, */
+/* .intro::after { */
+/*     filter: opacity(.7); */
+/* } */
+
+.introContent {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    padding: 40px 30px;
+    margin: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.introContent h1 {
+    margin-bottom: 60px;
+    padding: 0px;
+}
+
+.inroMessage {
+}
+
+.introWhenWhere {
+    margin-top: 30px;
+}
+
+/* menus ************************/
+
+.menus {
+    padding: 60px 0px;
+}
+
+.menus ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menus ul li {
+    padding: 0px 10px;
+    list-style: none;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* bloomAndBride ************************/
+
+.bloomAndBride {
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+}
+
+.whoAreUs {
+    width: 50%;
+    max-width: 512px;
+    padding: 0px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .bloomAndBride {
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    .whoAreUs {
+        width: 100%;
+        max-width: none;
+    }
+
+    .whoAreUs:nth-child(1) {
+        margin-bottom: 50px;
+    }
+}
+
+.whoAreUs .name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.whoAreUs .relation {
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+.whoAreUs .profileImg {
+    width: 100% !important;
+    height: 450px;
+}
+
+/* spliter1 ***********************/
+
+.spliter1 {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spliter1 p.poem {
+    margin: 30px 0px 0px;
+    text-align: center;
+    line-height: 2em;
+    font-family: 'MapoFlowerIsland';
+    font-weight: bold;
+}
+
+.poetry {
+    font-size: 0.9em;
+}
+
+/* where & when */
+
+.whereWhen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whereWhenWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.whenOfWhereWhen {
+    margin-right: 30px;
+}
+
+.whereOfWhereWhen {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.whereOfWhereWhen li {
+    margin: 0px;
+}
+
+.whereWhenMapContainer {
+    margin-top: 30px;
+    max-width: 500px;
+    width: 100%;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .whereWhenWrapper {
+        flex-direction: column;
+    }
+
+    .whenOfWhereWhen {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.mapIcon {
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    margin: 0px 5px;
+}
+
+
+/* gallery ************************/
+
+.gallery {
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.galleryWrapper {
+    padding: 0px 10px;
+}
+
+section.letterForCovid19 {
+    text-align: left;
+    background: #f8f8f8;
+}
+
+.letterForCovid19 .letterForCovid19Container {
+    font-family: 'BodyFont';
+    max-width: 620px;
+    padding: 0px 10px;
+    margin: 0px auto;
+    line-height: 2em;
+}
+
+.hallSettingContainer {
+    max-width: 500px;
+    margin: 20px auto 0px;
+}
+
+.hallSettingContainer figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'BodyFont';
+}
