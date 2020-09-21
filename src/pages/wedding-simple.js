@@ -52,11 +52,6 @@ function Menus(props) {
           </Link>
         </li>
         <li>
-          <Link to={`#${LetterForCOVID19.name}`}>
-            코로나 안내
-          </Link>
-        </li>
-        <li>
           <Link to={`#${WhereWhen.name}`}>
             시간과 장소
           </Link>
@@ -159,39 +154,6 @@ function Gallery({data}) {
   );
 }
 
-function LetterForCOVID19({data}) {
-  return (
-    <section
-      id={LetterForCOVID19.name}
-      className={styles.letterForCovid19}
-    >
-      <h1>코로나 안내</h1>
-      <p className={styles.letterForCovid19Container}>
-        최근 코로나19로 인해 어려운 시기를 보내고 있는 요즘, 걱정이 많으실거라 생각됩니다.
-        결혼식 참석에 대한 부담은 갖지 마시고 마음 가득 축복해주시길 바랍니다.
-        전해주시는 축하의 마음만으로도 저희는 큰 힘과 기쁨 됨을 말씀드리고 싶습니다.
-        새로운 출발을 축하해 주시는 모든 분들께 진심으로 감사드리며 건강하시기를 기원합니다.<br />
-        <br />
-        <strong>
-          * 로비에서 웰컴 드링크를 제공합니다.<br />
-          * 식사는 1인 코스로 개인별로 제공됩니다.<br />
-          * 예식장도 제한된 인원이 단독으로 사용합니다.
-        </strong>
-      </p>
-      <figure className={styles.hallSettingContainer}>
-        <Img
-          fluid={data.weddingHallSetting.childImageSharp.fluid}
-          alt="웨딩홀 자리 배치"
-          imgStyle={{
-            filter: "contrast(60%) brightness(120%)"
-          }}
-        />
-        <figcaption>웨딩홀 자리 배치</figcaption>
-      </figure>
-    </section>
-  );
-}
-
 export default function WeddingPage({data}) {
   return (
     <div className={styles.container}>
@@ -224,8 +186,6 @@ export default function WeddingPage({data}) {
       </div>
 
       <Gallery data={data} />
-
-      <LetterForCOVID19 data={data} />
 
       <WhereWhen data={data} />
 
@@ -287,13 +247,6 @@ export const query = graphql`
     }
     ogImg: file(relativePath: { eq: "og_wedding.jpg" }) {
       publicURL
-    }
-    weddingHallSetting: file(relativePath: { eq: "wedding_hall_setting.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-      }
     }
     map: file(relativePath: { eq: "map.png" }) {
       childImageSharp {

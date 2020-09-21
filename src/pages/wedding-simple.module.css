@@ -278,27 +278,3 @@
 .galleryWrapper {
     padding: 0px 10px;
 }
-
-section.letterForCovid19 {
-    text-align: left;
-    background: #f8f8f8;
-}
-
-.letterForCovid19 .letterForCovid19Container {
-    font-family: 'BodyFont';
-    max-width: 620px;
-    padding: 0px 10px;
-    margin: 0px auto;
-    line-height: 2em;
-}
-
-.hallSettingContainer {
-    max-width: 500px;
-    margin: 20px auto 0px;
-}
-
-.hallSettingContainer figcaption {
-    text-align: center;
-    margin-top: 10px;
-    font-family: 'BodyFont';
-}
